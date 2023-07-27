@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .left-side{
+    width: 50vw;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .right-side{
+    width: 50vw;
+    float: right;
+    background-color: #8850BF;
+  }
+
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .form-container {
+    flex: 1;
+    background-color: #8850BF;
+    color: white;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .form-login {
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 40px 110px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-label {
+    color: #333;
+  }
+
+  .form-control {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    min-width: 300px;
+    box-shadow: none;
+  }
+
+  .linkPassword {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .linkPassword a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  .linkPassword a:hover {
+    text-decoration: underline;
+  }
+
+  .btn-primary {
+    background-color: #D6ACF2;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    width: 160%;
+    margin-top: 1 0px;
+  }
+
+  .btn-primary:hover {
+    background-color: #6c1cbc;
+  }
+
+  button {
+    background-color: #fff;
+    color: #8850BF;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+  
