@@ -17,6 +17,7 @@
 
 .logo-sidenav{
   max-width: 200px;
+  margin-bottom: 20px;
 }
 
 .sidenav-links {
@@ -29,11 +30,19 @@
 .sidenav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 22px;
+  font-size: 19px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  transition: color 0.2s;
 }
 
 .sidenav-links a:hover {
-  text-decoration: underline;
+  color: #cdb1e9;
+}
+
+.sidenav-links a.active {
+  background-color: #392259; 
+  width: 200px;
+  padding: 10px 30px 10px 5px;
+  border-radius: 8px;
 }
