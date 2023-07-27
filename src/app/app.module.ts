@@ -8,11 +8,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
-import { LoginComponent } from './components/login/login.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ButtonBackComponent } from './components/button-back/button-back.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ForgotPasswordComponent,
     ResetPasswordComponent,
     ButtonBackComponent,
+    SidenavComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
