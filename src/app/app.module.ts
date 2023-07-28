@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ButtonBackComponent,
     SidenavComponent,
     DashboardComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

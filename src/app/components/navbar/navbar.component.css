@@ -1,0 +1,15 @@
+.icon-perfil{
+    width: 50px;
+}
+
+/* Estilização dos itens do navbar */
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    margin-right: 20px; /* Adiciona um espaçamento à direita entre os itens */
+  }
+  
+  .navbar-nav li {
+    margin-left: 15px; /* Adiciona um espaçamento entre os itens */
+  }
+  
