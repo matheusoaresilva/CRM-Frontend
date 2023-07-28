@@ -17,6 +17,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CardInfoDashboardComponent } from './components/card-info-dashboard/card-info-dashboard.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SidenavComponent,
     DashboardComponent,
     NavbarComponent,
+    CardInfoDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

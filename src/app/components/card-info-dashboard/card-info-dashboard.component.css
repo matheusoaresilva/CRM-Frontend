@@ -1,0 +1,71 @@
+  * {
+    border: none;
+    background-color: transparent;
+  }
+
+
+  .custom-col {
+    padding: 15px;
+  }
+
+  .sold-item {
+    background-color: #B88DDB;
+    
+  }
+
+  .refund-request{
+    background-color: #5B7594;
+  }
+
+  .cancelled-orders{
+    background-color: #A93E44;
+  }
+
+  .new-users{
+    background-color: #FFB851;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .example-card {
+    min-width: 270px;
+    margin-top: 38px;
+    padding: 45px;
+    border-radius: 20px;
+    display: inline-block;
+    color: #fff;
+  }
+
+  .upper-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+
+  .upper-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+
+  .lower-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .lower-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+  }
