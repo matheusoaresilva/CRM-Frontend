@@ -3,12 +3,31 @@
     <div class="sidenav-header">
       <img src="../../../assets/logo-sidenav.png" alt="" class="logo-sidenav">
       <div class="sidenav-links">
-        <a routerLink="/" routerLinkActive="active">Dashboard</a>
-        <a routerLink="/analytics" routerLinkActive="active">Analytics</a>
-        <a routerLink="/customers" routerLinkActive="active">Customers</a>
-        <a routerLink="/orders" routerLinkActive="active">Orders</a>
-        <a routerLink="/products" routerLinkActive="active">Products</a>
-        <a routerLink="/settings" routerLinkActive="active">Settings</a>
+        <div class="item">
+          <mat-icon >dashboard</mat-icon>
+          <a routerLink="/" routerLinkActive="active">Dashboard</a>
+        </div>
+        <div class="item">
+          <mat-icon >data_usage</mat-icon>
+          <a routerLink="/analytics" routerLinkActive="active">Analytics</a>
+        </div>
+        <div class="item"> 
+          <mat-icon >supervisor_account</mat-icon>
+          <a routerLink="/customers" routerLinkActive="active">Customers</a>
+        </div>
+        <div class="item">
+          <mat-icon >shopping_cart</mat-icon>
+          <a routerLink="/orders" routerLinkActive="active">Orders</a>
+        </div>
+        <div class="item">
+          <mat-icon >shop_two</mat-icon>
+          <a routerLink="/products" routerLinkActive="active">Products</a>
+        </div>
+        <div class="item">
+          <mat-icon >settings</mat-icon>
+          <a routerLink="/settings" routerLinkActive="active">Settings</a>
+        </div>
+        
       </div>
     </div>
   </mat-sidenav>
