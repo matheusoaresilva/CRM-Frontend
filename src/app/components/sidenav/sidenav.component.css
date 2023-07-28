@@ -1,11 +1,16 @@
 .sidenav-container {
   height: 100vh;
+  position: relative;
 }
 
 .sidenav {
   width: 250px;
   background-color: #190F26;
   color: #fff;
+  position: fixed; /* Torna o sidenav fixo */
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
 }
 
 .sidenav-header{
@@ -17,7 +22,7 @@
 
 .logo-sidenav{
   max-width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .sidenav-links {
