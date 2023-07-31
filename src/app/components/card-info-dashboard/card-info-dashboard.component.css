@@ -3,7 +3,6 @@
     background-color: transparent;
   }
 
-
   .custom-col {
     padding: 15px;
   }
@@ -31,7 +30,8 @@
   }
 
   .example-card {
-    min-width: 270px;
+    min-width: 290px;
+    max-width: 300px;
     margin-top: 38px;
     padding: 45px;
     border-radius: 20px;
@@ -69,3 +69,24 @@
     right: 0;
     padding: 10px;
   }
+
+@media (max-width: 767px) {
+  .custom-col {
+    padding: 5px; 
+  }
+
+  .example-card {
+    min-width: 150px;
+    margin-top: 20px; 
+  }
+
+  .upper-left {
+    font-size: 1.2rem; 
+  }
+
+  .upper-right,
+  .lower-left,
+  .lower-right {
+    padding: 5px;
+  }
+}
