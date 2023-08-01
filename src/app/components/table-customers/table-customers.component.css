@@ -1,0 +1,14 @@
+
+.imgInfos {
+  display: flex;
+  align-items: center;
+}
+
+.textContextInfo {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+img{
+  margin-bottom: 10px;
+}

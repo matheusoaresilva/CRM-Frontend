@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Customers</h1>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search for customers" aria-label="Search for customers">
+          <button class="btn btn-primary add-client-button" type="button">Add Client</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Client</th>
+              <th scope="col">Created</th>
+              <th scope="col">Last Order</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of tableContext" class="customer">
+              <td>
+                <div class="imgInfos">
+                <img src={{customer.imgUrl}}   alt="Customer 1" width="70" height="70" class="rounded-circle">
+                <div class="textContextInfo">
+                  <h4>{{ customer.clientName }}</h4>
+                  <p>{{ customer.email}}</p>
+                </div>  
+                </div>
+              </td>
+              <td>{{ customer.dateCreated}}</td>
+              <td>{{customer.dateOrder}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

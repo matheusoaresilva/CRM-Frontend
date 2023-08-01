@@ -19,6 +19,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardInfoDashboardComponent } from './components/card-info-dashboard/card-info-dashboard.component';
 import { MatCardModule } from '@angular/material/card';
+import { CustomersComponent } from './pages/customers/customers.component';
+import { TableCustomersComponent } from './components/table-customers/table-customers.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { MatCardModule } from '@angular/material/card';
     DashboardComponent,
     NavbarComponent,
     CardInfoDashboardComponent,
+    CustomersComponent,
+    TableCustomersComponent,
   ],
   imports: [
     BrowserModule,

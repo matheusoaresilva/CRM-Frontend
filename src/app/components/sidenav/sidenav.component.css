@@ -31,9 +31,8 @@
   align-items: start;
   padding: 22px;
 }
-/* Estilização dos ícones e links na classe .item */
 .item {
-  align-items: center; /* Alinha verticalmente ao centro */
+  align-items: center;
 }
 
 .item mat-icon {
@@ -54,9 +53,9 @@
   color: #cdb1e9;
 }
 
-.sidenav-links a.active {
+/* .sidenav-links a.active {
   background-color: #392259; 
   width: 200px;
   padding: 10px 30px 10px 5px;
   border-radius: 8px;
-}
+} */
