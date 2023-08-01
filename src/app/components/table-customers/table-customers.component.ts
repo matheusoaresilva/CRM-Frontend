@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class TableCustomersComponent {
   tableContext = [
     {
-      imgUrl: '../../../assets/icon-perfil-teste (1).png',
+      imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1odEQEstuYrA-XzKDTDUE89XB6utIbA3QXw&usqp=CAU',
       clientName: 'John Doe',
       email: 'john.doe@example.com',
       dateCreated: '2022-05-15',
