@@ -32,11 +32,13 @@
   padding: 22px;
 }
 .item {
+  display: inline-flex; 
   align-items: center;
 }
 
 .item mat-icon {
-    width: 35px;
+  margin-right: 8px; 
+  align-items: center;
 }
 
 
