@@ -21,6 +21,8 @@ import { CardInfoDashboardComponent } from './components/card-info-dashboard/car
 import { MatCardModule } from '@angular/material/card';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { TableCustomersComponent } from './components/table-customers/table-customers.component';
+import { FormsAddCustomerComponent } from './components/forms-add-customer/forms-add-customer.component';
+import { AddCustomersComponent } from './pages/add-customers/add-customers.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { TableCustomersComponent } from './components/table-customers/table-cust
     CardInfoDashboardComponent,
     CustomersComponent,
     TableCustomersComponent,
+    FormsAddCustomerComponent,
+    AddCustomersComponent,
   ],
   imports: [
     BrowserModule,

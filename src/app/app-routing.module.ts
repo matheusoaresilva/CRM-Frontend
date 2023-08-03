@@ -1,3 +1,4 @@
+import { FormsAddCustomerComponent } from './components/forms-add-customer/forms-add-customer.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
@@ -5,6 +6,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CustomersComponent } from './pages/customers/customers.component';
+import { AddCustomersComponent } from './pages/add-customers/add-customers.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,10 @@ const routes: Routes = [
   {
     path: 'customers',
     component: CustomersComponent
+  },
+  {
+    path: 'customers/addcustomer',
+    component: AddCustomersComponent
   }
 ];
 
