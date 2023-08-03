@@ -23,6 +23,8 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { TableCustomersComponent } from './components/table-customers/table-customers.component';
 import { FormsAddCustomerComponent } from './components/forms-add-customer/forms-add-customer.component';
 import { AddCustomersComponent } from './pages/add-customers/add-customers.component';
+import { AddCustomersAddressComponent } from './pages/add-customers-address/add-customers-address.component';
+import { FormsAddCustomerAddressComponent } from './components/forms-add-customer-address/forms-add-customer-address.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { AddCustomersComponent } from './pages/add-customers/add-customers.compo
     TableCustomersComponent,
     FormsAddCustomerComponent,
     AddCustomersComponent,
+    AddCustomersAddressComponent,
+    FormsAddCustomerAddressComponent,
   ],
   imports: [
     BrowserModule,
