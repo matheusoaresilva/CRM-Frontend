@@ -30,7 +30,7 @@
   }
 
   .example-card {
-    min-width: 290px;
+    min-width: 250px;
     max-width: 300px;
     margin-top: 38px;
     padding: 45px;
@@ -70,23 +70,44 @@
     padding: 10px;
   }
 
-@media (max-width: 767px) {
-  .custom-col {
-    padding: 5px; 
+  @media (max-width: 1280px) {
+    .example-card {
+      min-width: 200px; /* Reduz a largura máxima dos cards para 200px */
+      padding-top: 19px;
+    }
+
+    .upper-left{
+      font-size: 1.3rem;
+    }
+
+    .upper-left, .upper-right{
+      padding-top: 0px;
+    }
+
+    .upper-right,
+    .lower-left,
+    .lower-right {
+      font-size: 0.8rem; /* Reduz o tamanho da fonte dentro dos cards */
+    }
   }
 
-  .example-card {
-    min-width: 150px;
-    margin-top: 20px; 
-  }
+  @media (max-width: 1024px) {
+    .example-card {
+      min-width: 160px; /* Reduz a largura máxima dos cards para 200px */
+      padding-top: 19px;
+    }
 
-  .upper-left {
-    font-size: 1.2rem; 
-  }
+    .upper-left{
+      font-size: 1.1rem;
+    }
 
-  .upper-right,
-  .lower-left,
-  .lower-right {
-    padding: 5px;
+    .upper-left, .upper-right{
+      padding-top: 0px;
+    }
+
+    .upper-right,
+    .lower-left,
+    .lower-right {
+      font-size: 0.6rem; /* Reduz o tamanho da fonte dentro dos cards */
+    }
   }
-}
