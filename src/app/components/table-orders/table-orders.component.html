@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row mb-3">
+      <div class="col-sm">
+          <h1>Orders</h1>
+      </div>
+      <div class="col-sm">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            
+          </div>
+          <input type="text" class="form-control search-input" placeholder="Search Product..." aria-label="Search for orders">
+          <span class="input-group-text">
+            <mat-icon>search</mat-icon>
+          </span>
+        </div>
+      </div>
+  </div>
+  <table class="table table-hover">
+      <thead class="table-light">
+          <tr>
+              <th scope="col">Order</th>
+              <th scope="col">Name</th>
+              <th scope="col">Status</th>
+              <th scope="col">Total</th>
+              <th scope="col">Date</th>
+              <th scope="col">View Details</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let order of ordersContext">
+              <th scope="row">
+                  <input class="form-check-input" type="checkbox" name="checkorders" id="flexCheckDefault">
+                   {{order.id}}
+              </th>
+              <td>{{order.clientName}}</td>
+              <td [ngClass]="{
+                'container-realized': order.status === 'REALIZED',
+                'container-cancelled': order.status === 'CANCELLED',
+                'container-paid': order.status === 'PAID',
+                'container-not-authorized': order.status === 'NOT_AUTHORIZED',
+                'container-confirmed': order.status === 'CONFIRMED',
+                'container-ready': order.status === 'READY',
+                'container-out-for-delivery': order.status === 'OUT_FOR_DELIVERY',
+                'container-delivered': order.status === 'DELIVERED'
+              }">{{order.status}}</td>
+              <td>R$ {{order.total}}</td>
+              <td>{{order.date}}</td>
+              <td><button type="button" class="btn">View Details</button></td>
+          </tr>
+      </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end custom-pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+</div>

@@ -1,0 +1,123 @@
+/* Estilos para o container */
+.container {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 85%;
+  margin-top: 2%;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+/* Estilos para o botão */
+.btn {
+  background-color: #392259;
+  border-radius: 20px;
+  color: #fff;
+  height: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 13px;
+}
+
+/* Estilos para as células da tabela e cabeçalho */
+td, table, th {
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Estilos para o texto das células */
+td {
+  color: #999999;
+}
+
+/* Estilos para os containers com base no status */
+.container-realized {
+  background-color: #f4b942;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-cancelled {
+  background-color: #f48586;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-paid {
+  background-color: #f7e1a0;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-not-authorized {
+  background-color: #c4c4c4;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-confirmed {
+  background-color: #a0e8e8;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-ready {
+  background-color: #d1a0d1;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-out-for-delivery {
+  background-color: #90b390;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-delivered {
+  background-color: #b8f8b8;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Estilos para o input */
+.search-input {
+  font-size: 16px;
+  border-color: #ccc;
+}
+
+/* Estilos para o ícone de pesquisa */
+.input-group-text {
+  background-color: #392259;
+  border-color: #392259;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Estilos para o ícone de pesquisa quando o mouse passa por cima */
+.input-group-text:hover {
+  background-color: #190F26;
+}
+
+/* Estilos para a navegação de paginação */
+.custom-pagination {
+  margin-top: 20px;
+}
+
+/* Estilos para os links de página */
+.page-link {
+  color: #392259;
+  border: 1px solid #392259;
+}
+
+/* Estilos para os links de página quando o mouse passa por cima */
+.page-link:hover {
+  background-color: #8158bc;
+  color: #fff;
+}
+
+/* Estilos para o link de página ativo (página atual) */
+.page-item.active .page-link {
+  background-color: #392259;
+  color: #fff;
+  border: 1px solid #392259;
+}

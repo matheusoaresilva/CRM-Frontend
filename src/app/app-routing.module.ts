@@ -8,6 +8,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { AddCustomersComponent } from './pages/add-customers/add-customers.component';
 import { AddCustomersAddressComponent } from './pages/add-customers-address/add-customers-address.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'customers/addcustomer-address',
     component: AddCustomersAddressComponent
+  },
+  {
+    path: 'orders',
+    component: OrdersComponent
   }
 ];
 
