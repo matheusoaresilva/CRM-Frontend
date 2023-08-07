@@ -27,6 +27,10 @@ import { AddCustomersAddressComponent } from './pages/add-customers-address/add-
 import { FormsAddCustomerAddressComponent } from './components/forms-add-customer-address/forms-add-customer-address.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { TableOrdersComponent } from './components/table-orders/table-orders.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { CatalogProductsComponent } from './components/catalog-products/catalog-products.component';
+import { ProductCardDetailsComponent } from './components/product-card-details/product-card-details.component';
+import { CardDetailsComponent } from './pages/products/card-details/card-details.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { TableOrdersComponent } from './components/table-orders/table-orders.com
     FormsAddCustomerAddressComponent,
     OrdersComponent,
     TableOrdersComponent,
+    ProductsComponent,
+    CatalogProductsComponent,
+    ProductCardDetailsComponent,
+    CardDetailsComponent,
   ],
   imports: [
     BrowserModule,

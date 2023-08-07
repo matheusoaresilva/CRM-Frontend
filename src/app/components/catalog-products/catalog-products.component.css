@@ -1,0 +1,117 @@
+/* Global styles for the container and row */
+.container{
+  margin-bottom: 8%;
+}
+
+.btn{
+    background-color: #D6ACF2;
+    color: #ffff;
+    border: 3px solid #D6ACF2;
+}
+
+.btn:hover{
+  background-color: #bb72ec;
+  border: 3px solid #bb72ec;
+}
+
+.pagination{
+  margin-top: 3%;
+  margin-left: 20px;
+}
+
+/* Custom styling for the pagination */
+.pagination {
+  margin-top: 20px;
+}
+
+.page-item {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.page-link {
+  color: #D6ACF2; /* Change this to the desired link color */
+  background-color: #fff;
+  border: 1px solid #D6ACF2; /* Change this to the desired border color */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.page-link:hover {
+  background-color: #bb72ec; /* Change this to the desired hover background color */
+}
+
+.page-item.active .page-link {
+  background-color: #D6ACF2; /* Change this to the desired active link background color */
+  border-color: #D6ACF2; /* Change this to the desired active link border color */
+  color: #fff; /* Change this to the desired active link text color */
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d; /* Change this to the desired disabled link color */
+  background-color: #f7f7f7; /* Change this to the desired disabled link background color */
+  border-color: #f7f7f7; /* Change this to the desired disabled link border color */
+  pointer-events: none;
+}
+
+/* Center the pagination if needed */
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.container-fluid {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 80%;
+  margin: 2% auto;
+  margin-top: 1%;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+.row {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Styles for cards and images */
+.card {
+  padding: 20px;
+  border: none;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  cursor: pointer;
+}
+
+img {
+  height: auto; /* Maintain image aspect ratio */
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Media query for medium-sized screens */
+@media (max-width: 1280px) {
+  img {
+    max-width: 150px;
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
