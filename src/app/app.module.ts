@@ -30,7 +30,7 @@ import { TableOrdersComponent } from './components/table-orders/table-orders.com
 import { ProductsComponent } from './pages/products/products.component';
 import { CatalogProductsComponent } from './components/catalog-products/catalog-products.component';
 import { ProductCardDetailsComponent } from './components/product-card-details/product-card-details.component';
-import { CardDetailsComponent } from './pages/products/card-details/card-details.component';
+import { ProductsDetailsComponent } from './pages/products-details/products-details.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,7 @@ import { CardDetailsComponent } from './pages/products/card-details/card-details
     ProductsComponent,
     CatalogProductsComponent,
     ProductCardDetailsComponent,
-    CardDetailsComponent,
+    ProductsDetailsComponent,
   ],
   imports: [
     BrowserModule,
