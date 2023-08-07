@@ -1,21 +1,53 @@
-h1{
+*{
+    border: none;
+}
+
+.title{
     margin-left: 2%;
+    margin-bottom: 5%;
+    font-weight: 500;
 }
 
 .container {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
     padding: 40px;
     max-width: 85%;
-    margin-top: 2%;
+    /* margin-top: 2%;
+    margin-bottom: 8%; */
     border-radius: 20px;
     background-color: #fff;
   }
 
   img {
-    max-width: 100%;
+    max-width: 110%;
     height: auto;
     display: block;
-    margin: 0 auto;
     padding: 10%;
-    padding-top: 140px;
+    padding-top: 180px;
+    padding-right: 10%;
 }
+
+.card-text, .card-title{ 
+    margin-left: 12px;
+}
+
+.card-title{
+    font-size: 2rem;
+}
+
+.card-text{
+    font-size: 0.9rem;
+}
+
+td{
+    font-size: 1rem;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+
+  .btn{
+    background-color: #D6ACF2;
+    width: 10%;
+  }
