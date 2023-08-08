@@ -1,16 +1,17 @@
+<h1 class="title">Products</h1>
 <div class="container">
-    <h1>Products</h1>
+    
     <div class="container container-fluid">
     
         <div class="input-group">
-            <button type="button" class="btn btn-primary">New Products</button>
+            <button type="button" class="btn btn-primary" routerLink="/products/add-product">New Products</button>
             <input type="text" class="form-control search-input" placeholder="Search Product..."
                 aria-label="Search for orders">
         </div>
         <!-- <mat-icon>search</mat-icon> -->
     </div>
     
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="row row-cols-1 row-cols-md-5 g-4">
         <div routerLink="/products/card-detail" class="col" *ngFor="let card of cards">
             <div class="card h-100">
                 <img src={{card.imgUrl}} class="card-img-top" alt="...">

@@ -31,6 +31,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CatalogProductsComponent } from './components/catalog-products/catalog-products.component';
 import { ProductCardDetailsComponent } from './components/product-card-details/product-card-details.component';
 import { ProductsDetailsComponent } from './pages/products-details/products-details.component';
+import { AddProductsComponent } from './pages/add-products/add-products.component';
+import { FormsAddProductComponent } from './components/forms-add-product/forms-add-product.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { ProductsDetailsComponent } from './pages/products-details/products-deta
     CatalogProductsComponent,
     ProductCardDetailsComponent,
     ProductsDetailsComponent,
+    AddProductsComponent,
+    FormsAddProductComponent,
   ],
   imports: [
     BrowserModule,

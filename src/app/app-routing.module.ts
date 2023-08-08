@@ -1,3 +1,4 @@
+import { AddProductsComponent } from './pages/add-products/add-products.component';
 import { ProductsDetailsComponent } from './pages/products-details/products-details.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -56,7 +57,12 @@ const routes: Routes = [
   {
     path: 'products/card-detail',
     component: ProductsDetailsComponent
+  },
+  {
+    path: 'products/add-product',
+    component: AddProductsComponent
   }
+
 ];
 
 @NgModule({

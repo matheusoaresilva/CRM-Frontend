@@ -12,8 +12,6 @@
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
     padding: 40px;
     max-width: 85%;
-    /* margin-top: 2%;
-    margin-bottom: 8%; */
     border-radius: 20px;
     background-color: #fff;
   }
@@ -47,7 +45,20 @@ table {
     border-spacing: 0 15px;
   }
 
-  .btn{
-    background-color: #D6ACF2;
-    width: 10%;
-  }
+.btn{
+background-color: #D6ACF2;
+width: 10%;
+}
+
+.btn-back{
+width: 5%;
+margin-left: 2%;
+border: 2px solid #D6ACF2;
+background-color: #ffff;
+color: #D6ACF2;
+}
+
+.btn:hover{
+background-color:#a23fe3 ;
+border: #a23fe3;
+}

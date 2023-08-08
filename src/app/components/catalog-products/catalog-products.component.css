@@ -1,8 +1,14 @@
-/* Global styles for the container and row */
 .container{
   margin-bottom: 8%;
 }
+.title{
+  font-weight: 500;
+  margin-left: 2%;
+}
 
+ h1{
+   font-weight: 500;
+ }
 .btn{
     background-color: #D6ACF2;
     color: #ffff;
@@ -19,7 +25,6 @@
   margin-left: 20px;
 }
 
-/* Custom styling for the pagination */
 .pagination {
   margin-top: 20px;
 }
@@ -27,34 +32,42 @@
 .page-item {
   display: inline-block;
   margin-right: 5px;
+  transition: transform 0.3s ease; /* Adicionando a transição */
+}
+
+.page-item:hover {
+  transform: scale(1.1); /* Aumentando o tamanho no hover */
 }
 
 .page-link {
-  color: #D6ACF2; /* Change this to the desired link color */
+  color: #D6ACF2;
   background-color: #fff;
-  border: 1px solid #D6ACF2; /* Change this to the desired border color */
+  border: 1px solid #D6ACF2;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 .page-link:hover {
-  background-color: #bb72ec; /* Change this to the desired hover background color */
+  background-color: #bb72ec;
+  color: #fff;
 }
 
+/* Restante do seu CSS... */
+
+
 .page-item.active .page-link {
-  background-color: #D6ACF2; /* Change this to the desired active link background color */
-  border-color: #D6ACF2; /* Change this to the desired active link border color */
-  color: #fff; /* Change this to the desired active link text color */
+  background-color: #D6ACF2;
+  border-color: #D6ACF2;
+  color: #fff;
 }
 
 .page-item.disabled .page-link {
-  color: #6c757d; /* Change this to the desired disabled link color */
-  background-color: #f7f7f7; /* Change this to the desired disabled link background color */
-  border-color: #f7f7f7; /* Change this to the desired disabled link border color */
+  color: #6c757d;
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
   pointer-events: none;
 }
 
-/* Center the pagination if needed */
 .justify-content-end {
   justify-content: flex-end;
 }
@@ -62,7 +75,7 @@
 .container-fluid {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  max-width: 80%;
+  max-width: 93%;
   margin: 2% auto;
   margin-top: 1%;
   border-radius: 7px;
@@ -70,11 +83,10 @@
 }
 
 .row {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
-/* Styles for cards and images */
 .card {
   padding: 20px;
   border: none;
@@ -84,24 +96,25 @@
   height: 100px;
   display: flex;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Adicionando a transição */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumentando o tamanho no hover */
 }
 
 img {
-  height: auto; /* Maintain image aspect ratio */
+  height: auto;
   align-items: center;
   justify-content: center;
 }
 
-
-
-/* Media query for medium-sized screens */
 @media (max-width: 1280px) {
   img {
     max-width: 150px;
   }
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .container-fluid {
     max-width: 100%;
