@@ -11,6 +11,7 @@ import { AddCustomersComponent } from './pages/add-customers/add-customers.compo
 import { AddCustomersAddressComponent } from './pages/add-customers-address/add-customers-address.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'products/add-product',
     component: AddProductsComponent
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent
   }
 
 ];
