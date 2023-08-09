@@ -18,10 +18,20 @@ export class SectionSettingsComponent {
   cancelEditProfile() {
     this.showProfileSettings = false;
   }
-
   saveProfile(){
     this.showProfileSettings = false;
   }
 
+  closeNotifications(){
+    this.showNotificationPreferences = false;
+  }
+
+  closePrivacy(){
+    this.showPrivacySettings = false;
+  }
+
+  closeSecurity(){
+    this.showSecuritySettings = false;
+  }
   
 }

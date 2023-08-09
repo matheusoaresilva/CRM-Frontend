@@ -1,114 +1,124 @@
 <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body text-center">
-            <img src="../../../assets/icon-perfil-teste (3).png" alt="Profile Image" class="profile-image">
-            <h5 class="card-title mt-3">John Doe</h5>
-            <p class="card-text">Role: Administrator</p>
-            <p class="card-text">Email: john.doe@example.com</p>
-            <button class="btn btn-primary" (click)="toggleEditProfile()">Edit Profile</button>
-          </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <img src="../../../assets/icon-perfil-teste (3).png" alt="Profile Image" class="profile-image">
+          <h5 class="card-title mt-3">John Doe</h5>
+          <p class="card-text">Role: Administrator</p>
+          <p class="card-text">Email: john.doe@example.com</p>
+          <button class="btn btn-primary" (click)="toggleEditProfile()">Edit Profile</button>
         </div>
       </div>
-      <div class="col-md-8">
-        <div class="card" *ngIf="showProfileSettings">
-          <div class="card-body">
-            <h5 class="card-title">Profile Settings</h5>
-            <form (ngSubmit)="saveProfile()">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="John Doe">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="john.doe@example.com">
-              </div>
-              <div class="form-group">
-                <label for="role">Role</label>
-                <input type="text" class="form-control" id="role" placeholder="Administrator" disabled>
-              </div>
-              <button type="submit" class="btn btn-primary">Save Changes</button>
-              <button type="button" class="btn btn-secondary ml-2" (click)="cancelEditProfile()">Cancel</button>
-            </form>
-          </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card" *ngIf="showProfileSettings">
+        <div class="card-body">
+          <h5 class="card-title">Profile Settings</h5>
+          <form (ngSubmit)="saveProfile()">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="john.doe@example.com">
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <input type="text" class="form-control" id="role" placeholder="Administrator" disabled>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-secondary ml-2" (click)="cancelEditProfile()">Cancel</button>
+          </form>
         </div>
-        <div class="card mt-3">
-          <div class="card-body">
-            <h5 class="card-title">Other Settings</h5>
-            <ul class="list-group">
-              <li class="list-group-item" (click)="showNotificationPreferences = !showNotificationPreferences">Notification Preferences</li>
-              <li class="list-group-item" (click)="showPrivacySettings = !showPrivacySettings">Privacy Settings</li>
-              <li class="list-group-item" (click)="showSecuritySettings = !showSecuritySettings">Security Settings</li>
-            </ul>
-          </div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Other Settings</h5>
+          <ul class="list-group">
+            <li class="list-group-item" (click)="showNotificationPreferences = !showNotificationPreferences">
+              Notification Preferences</li>
+            <li class="list-group-item" (click)="showPrivacySettings = !showPrivacySettings">Privacy Settings</li>
+            <li class="list-group-item" (click)="showSecuritySettings = !showSecuritySettings">Security Settings</li>
+          </ul>
         </div>
-        <div class="container mt-5" *ngIf="showNotificationPreferences">
-            <div class="row">
-              <div class="col-md-8">
+      </div>
+      <div class="container mt-5" *ngIf="showNotificationPreferences">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card mt-3">
+              <div class="card-body">
                 <div class="card mt-3">
-                  <div class="card-body" >
-                    <div class="card mt-3" >
-                      <div class="card-body">
-                        <h5 class="card-title">Notification Preferences</h5>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="emailNotifications">
-                          <label class="form-check-label" for="emailNotifications">Email Notifications</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="smsNotifications">
-                          <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
-                        </div>
-                        <div class="form-group mt-3">
-                          <label for="notificationFrequency">Notification Frequency</label>
-                          <select class="form-control" id="notificationFrequency">
-                            <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="monthly">Monthly</option>
-                          </select>
-                        </div>
-                        <button type="button" class="btn btn-primary">Save Preferences</button>
-                      </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Notification Preferences</h5>
+                      <button type="button" class="btn-close" aria-label="Close"
+                        (click)="closeNotifications()"></button>
                     </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input " id="emailNotifications">
+                      <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="smsNotifications">
+                      <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
+                    </div>
+                    <div class="form-group mt-3">
+                      <label for="notificationFrequency">Notification Frequency</label>
+                      <select class="form-control" id="notificationFrequency">
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                      </select>
+                    </div>
+                    <button type="button" class="btn btn-primary">Save Preferences</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
-        <div class="card mt-3" *ngIf="showPrivacySettings">
-          <div class="card-body">
+        </div>
+      </div>
+
+      <div class="card mt-3" *ngIf="showPrivacySettings">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
             <h5 class="card-title">Privacy Settings</h5>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="privateAccount">
-              <label class="form-check-label" for="privateAccount">Private Account</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="hideActivity">
-              <label class="form-check-label" for="hideActivity">Hide Activity</label>
-            </div>
+            <button type="button" class="btn-close" aria-label="Close" (click)="closePrivacy()"></button>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="privateAccount">
+            <label class="form-check-label" for="privateAccount">Private Account</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="hideActivity">
+            <label class="form-check-label" for="hideActivity">Hide Activity</label>
           </div>
         </div>
-        <div class="card mt-3" *ngIf="showSecuritySettings">
-          <div class="card-body">
+      </div>
+      <div class="card mt-3" *ngIf="showSecuritySettings">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
             <h5 class="card-title">Security Settings</h5>
-            <p>Change Password:</p>
-            <div class="form-group">
-              <label for="oldPassword">Old Password</label>
-              <input type="password" class="form-control" id="oldPassword">
-            </div>
-            <div class="form-group">
-              <label for="newPassword">New Password</label>
-              <input type="password" class="form-control" id="newPassword">
-            </div>
-            <div class="form-group">
-              <label for="confirmPassword">Confirm New Password</label>
-              <input type="password" class="form-control" id="confirmPassword">
-            </div>
-            <button type="submit" class="btn btn-primary">Change Password</button>
+            <button type="button" class="btn-close" aria-label="Close" (click)="closeSecurity()"></button>
           </div>
+          <p>Change Password:</p>
+          <div class="form-group">
+            <label for="oldPassword">Old Password</label>
+            <input type="password" class="form-control" id="oldPassword">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" class="form-control" id="newPassword">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm New Password</label>
+            <input type="password" class="form-control" id="confirmPassword">
+          </div>
+          <button type="submit" class="btn btn-primary">Change Password</button>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
