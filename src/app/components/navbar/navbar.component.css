@@ -11,3 +11,7 @@
   .navbar-nav li {
     margin-left: 15px; 
   }
+
+  img, a{
+    cursor: pointer;
+  }

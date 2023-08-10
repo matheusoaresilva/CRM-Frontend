@@ -36,6 +36,9 @@ import { FormsAddProductComponent } from './components/forms-add-product/forms-a
 import { SettingsComponent } from './pages/settings/settings.component';
 import { SectionSettingsComponent } from './components/section-settings/section-settings.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { ProfileDetailsComponent } from './pages/profile-details/profile-details.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,8 @@ import { MatMenuModule} from '@angular/material/menu';
     FormsAddProductComponent,
     SettingsComponent,
     SectionSettingsComponent,
+    ProfileDetailsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +83,7 @@ import { MatMenuModule} from '@angular/material/menu';
     MatCardModule,
     MatMenuModule,
     MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
