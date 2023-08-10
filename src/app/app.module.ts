@@ -35,6 +35,7 @@ import { AddProductsComponent } from './pages/add-products/add-products.componen
 import { FormsAddProductComponent } from './components/forms-add-product/forms-add-product.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { SectionSettingsComponent } from './components/section-settings/section-settings.component';
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,9 @@ import { SectionSettingsComponent } from './components/section-settings/section-
     MatButtonModule,
     MatTooltipModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
