@@ -39,6 +39,7 @@ import { MatMenuModule} from '@angular/material/menu';
 import { ProfileDetailsComponent } from './pages/profile-details/profile-details.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatMenuModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

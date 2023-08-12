@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +9,19 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  login = {
+
+  constructor(private router: Router){}
+
+  loginContent = {
     email:'',
     password:'',
   }
 
   userAuthentication(){
     
+  }
+
+  login(form : NgForm){
+    return form.valid? this.router.navigate(['dashboard']): alert('Invalid login form');
   }
 }

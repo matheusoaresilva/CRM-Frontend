@@ -9,3 +9,79 @@ body { margin: 0; font-family: 'Poppins', sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container{
+    max-width: 85%;
+  }
+  
+  h1{
+    font-weight: 500;
+  }
+  
+  .add-client-button{
+    background-color: #D6ACF2;
+    border: none;
+  }
+  
+  .t-table{
+    color: #999999;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  h4{
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  .imgInfos {
+    display: flex;
+    align-items: center;
+  }
+  
+  .textContextInfo {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+  
+  img{
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    /* Adjust the font size for smaller screens */
+    h1 {
+      font-size: 20px;
+    }
+  
+    /* Ensure the table is scrollable horizontally on smaller screens */
+    .table-responsive {
+      overflow-x: auto;
+    }
+  
+    /* Reduce the size of the images and font on smaller screens */
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    h4 {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Add space on the sides (left and right) for larger screens */
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
