@@ -9,25 +9,20 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col" class="t-table">Id</th>
-              <th scope="col" class="t-table">Name</th>
-              <th scope="col" class="t-table">Date of Birth</th>
+              <th scope="col" class=""> </th>
+              <th scope="col" class="t-table">Client</th>
               <th scope="col" class="t-table">CPF</th>
-              <th scope="col" class="t-table">Gender</th>
-              <th scope="col" class="t-table">Address</th>
-              <th scope="col" class="t-table">Email</th>
               <th scope="col" class="t-table">Phone</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="customer" *ngFor="let customer of customers">
-              <td>{{ customer.id }}</td>
-              <td>{{ customer.name }}</td>
-              <td>{{ customer.dateBirth }}</td>
+            <tr class="customer " *ngFor="let customer of customers">
+              
+              <td style="width: 96px;"> <img src={{customer.imgUrl}}   alt="Customer 1" width="70" height="70"  class="rounded-circle"></td>
+              <td> <p class="t-name"> {{ customer.name }}</p>
+                <p class="t-email">{{ customer.email }}</p>
+              </td>
               <td>{{ customer.cpf }}</td>
-              <td>{{ customer.gender }}</td>
-              <td>{{ customer.addressId }}</td>
-              <td>{{ customer.email }}</td>
               <td>{{ customer.phone }}</td>
             </tr>
           </tbody>

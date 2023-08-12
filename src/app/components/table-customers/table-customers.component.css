@@ -6,6 +6,7 @@ h1{
   font-weight: 500;
 }
 
+
 .add-client-button{
   background-color: #D6ACF2;
   border: none;
@@ -26,9 +27,15 @@ h4{
   align-items: center;
 }
 
-.textContextInfo {
-  margin-bottom: 0;
-  margin-left: 10px;
+.t-name {
+ font-size: 18px;
+ font-weight: 500;
+ margin-top: 10px;
+ margin-bottom: 0px;
+}
+
+.t-email{
+  color: #757575;
 }
 
 img{
@@ -46,10 +53,7 @@ img{
     font-size: 20px;
   }
 
-  /* Ensure the table is scrollable horizontally on smaller screens */
-  .table-responsive {
-    overflow-x: auto;
-  }
+  
 
   /* Reduce the size of the images and font on smaller screens */
   img {
