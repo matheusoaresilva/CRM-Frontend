@@ -68,11 +68,23 @@ ul.list-unstyled li {
   padding-left: 20px;
 }
 
-/* Remover o fundo cinza do modal */
-.modal-open {
-  overflow: hidden;
+.edit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.modal-backdrop {
-  display: none !important;
+.btn-edit{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-edit:hover{
+  color: #c482f0;
+}
+
+.btn-edit:active{
+  color: #D6ACF2;
 }

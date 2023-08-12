@@ -48,9 +48,20 @@
         
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">About me</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores! Minima, reiciendis repellendus. Delectus minus quis ipsa maiores culpa quos!</p>
+            <div class="edit">
+              <h5 class="card-title">About me</h5>
+              <button class="btn btn-edit" (click)="toggleEditProfile()">Edit</button>
+            </div>
+            <div *ngIf="!showProfileSettings" id="textContent">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores! Minima, reiciendis repellendus. Delectus minus quis ipsa maiores culpa quos!</p>
+            </div>
+            <div *ngIf="showProfileSettings" id="textareaContent">
+              <textarea class="form-control" rows="4" id="editedText" [(ngModel)]="editedTextValue"></textarea>
+              <button class="btn btn-primary" (click)="saveProfile()">Save</button>
+              <button class="btn btn-secondary" (click)="cancelEditProfile()">Cancel</button>
+            </div>
           </div>
+          
         </div>
         <div class="card mt-4">
           <div class="card-body">
