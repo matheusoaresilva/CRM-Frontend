@@ -7,20 +7,9 @@ import { Component } from '@angular/core';
 })
 export class SectionSettingsComponent {
 
-  showProfileSettings = false;
   showNotificationPreferences = false;
   showPrivacySettings = false;
   showSecuritySettings = false;
-
-  toggleEditProfile(){
-    this.showProfileSettings = !this.showProfileSettings;
-  }
-  cancelEditProfile() {
-    this.showProfileSettings = false;
-  }
-  saveProfile(){
-    this.showProfileSettings = false;
-  }
 
   closeNotifications(){
     this.showNotificationPreferences = false;
