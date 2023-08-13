@@ -1,3 +1,7 @@
+*{
+  text-decoration: none !important;
+}
+
 .container {
   max-width: 85%;
 }
@@ -79,3 +83,28 @@ img {
   }
 }
 
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination-controls ::ng-deep {
+  justify-content: space-between;
+}
+
+.pagination-controls ::ng-deep .ngx-pagination .current {
+  background:#ad45f3;
+  border-radius: 100%;
+}
+
+.pagination-controls ::ng-deep .ngx-pagination a:hover, .ngx-pagination button:hover{
+  background-color: #e3cdf1;
+  border-radius: 20px;
+}
+
+.pagination-controls ::ng-deep .ngx-pagination a, .ngx-pagination button{
+  text-decoration: none;
+}

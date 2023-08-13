@@ -13,7 +13,7 @@ export class TableCustomersComponent implements OnInit {
   @Input() customer!: Customers;
   
   p:number = 1;
-  itemsPerPage:number = 5;
+  itemsPerPage:number = 8;
   total:any;
 
   customers!: Customers[];
