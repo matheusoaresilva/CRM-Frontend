@@ -43,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { MessageErrorComponent } from './components/message-error/message-error.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ProfileComponent,
     FilterPipe,
     TableCustomersComponent,
+    MessageErrorComponent,
   ],
   imports: [
     BrowserModule,

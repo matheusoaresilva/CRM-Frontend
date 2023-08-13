@@ -13,8 +13,9 @@
             <input name="email" type="text" class="form-control" id="exampleFormControlInput1" placeholder="" ngModel pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$" #email="ngModel" [(ngModel)]="loginContent.email" required style="margin-bottom: 0px;">
 
             <div *ngIf="(email?.invalid && email?.touched) || email?.dirty">
-              <span class="message-error" *ngIf="email?.errors?.['required']">The field should be filled in</span>
-              <span class="message-error" *ngIf="email?.errors?.['pattern']">The email field should follow this pattern: "exemple@exemple.com"</span>
+              <app-message-error *ngIf="email?.errors?.['required']" message="The field should be filled in"></app-message-error>
+              
+              <app-message-error *ngIf="email?.errors?.['pattern']" message="The email field should follow this pattern: 'exemple@exemple.com'"></app-message-error>
             </div>
 
           </div>
@@ -22,8 +23,9 @@
             <label for="exampleFormControlInput2" class="form-label">Password:</label>
             <input name="password" type="password" class="form-control" id="exampleFormControlInput2" placeholder="" ngModel #password="ngModel" [(ngModel)]="loginContent.password" minlength="8" required style="margin-bottom: 0px;">
             <div *ngIf="(password?.invalid && password?.touched) || password?.dirty">
-              <span class="message-error" *ngIf="password?.errors?.['required']">The field should be filled in</span>
-              <span class="message-error" *ngIf="password?.errors?.['minlength']">The password must be at least 8 characters long </span>
+              <app-message-error *ngIf="password?.errors?.['required']" message=" The field should be filled in"></app-message-error>
+             <app-message-error  *ngIf="password?.errors?.['minlength']" message="The password must be at least 8 characters long"> </app-message-error>
+              
             </div>
           </div>
           <div class="linkPassword">

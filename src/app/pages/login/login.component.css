@@ -118,11 +118,7 @@
     cursor: pointer;
   }
 
-  .message-error{
-    font-size: 12px;
-    line-height: 12px;
-    color: #f75050;
-  }
+ 
 
   .ng-touched.ng-invalid:not(form){
     border-color: #f75050;
