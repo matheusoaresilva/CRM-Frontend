@@ -12,16 +12,25 @@ export class TableCustomersComponent implements OnInit {
   @Input() customer!: Customers;
   
   customers!: Customers[];
-  constructor( private serviceCustomers: CustomersService){
-
-  }
+  filteredCustomers!: Customers[];
+  constructor( private serviceCustomers: CustomersService){}
   ngOnInit(): void {
     this.serviceCustomers.list()
     .subscribe(
       res => {
         this.customers = res;
+        this.filteredCustomers = res;
       }
     )
+  }
+
+  searchText = '';
+
+  searchCustomers(): void{
+    const searchTextLower = this.searchText.toLowerCase().trim();
+    this.filteredCustomers = this.customers.filter(customer => {
+      return customer.name.toLowerCase().includes(searchTextLower);
+    })
   }
 }
 

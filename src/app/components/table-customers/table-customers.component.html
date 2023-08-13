@@ -3,7 +3,7 @@
       <div class="col">
         <h1>Customers</h1>
         <div class="input-group mb-3 search-input">
-          <input type="text" class="form-control" placeholder="Search for customers" aria-label="Search for customers">
+          <input type="text" class="form-control" placeholder="Search for customers" aria-label="Search for customers" [(ngModel)]="searchText" (keyup)="searchCustomers()">
           <button class="btn btn-primary add-client-button" type="button" routerLink="/customers/addcustomer">+ Add Client</button>
         </div>
         <table class="table table-striped">
@@ -16,8 +16,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="customer " *ngFor="let customer of customers">
-              
+            <tr class="customer " *ngFor="let customer of filteredCustomers">
               <td style="width: 96px;"> <img src={{customer.imgUrl}}   alt="Customer 1" width="70" height="70"  class="rounded-circle"></td>
               <td> <p class="t-name"> {{ customer.name }}</p>
                 <p class="t-email">{{ customer.email }}</p>

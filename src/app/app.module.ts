@@ -40,6 +40,7 @@ import { ProfileDetailsComponent } from './pages/profile-details/profile-details
 import { ProfileComponent } from './components/profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { HttpClientModule } from '@angular/common/http';
     SectionSettingsComponent,
     ProfileDetailsComponent,
     ProfileComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
