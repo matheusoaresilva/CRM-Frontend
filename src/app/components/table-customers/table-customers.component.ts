@@ -6,11 +6,16 @@ import { CustomersService } from 'src/app/core/services/customers.service';
 @Component({
   selector: 'app-table-customers',
   templateUrl: './table-customers.component.html',
-  styleUrls: ['./table-customers.component.css']
+  styleUrls: ['./table-customers.component.css'],
+
 })
 export class TableCustomersComponent implements OnInit {
   @Input() customer!: Customers;
   
+  p:number = 1;
+  itemsPerPage:number = 5;
+  total:any;
+
   customers!: Customers[];
   filteredCustomers!: Customers[];
   constructor( private serviceCustomers: CustomersService){}
@@ -20,6 +25,7 @@ export class TableCustomersComponent implements OnInit {
       res => {
         this.customers = res;
         this.filteredCustomers = res;
+        this.total = res.length;
       }
     )
   }
@@ -32,5 +38,6 @@ export class TableCustomersComponent implements OnInit {
       return customer.name.toLowerCase().includes(searchTextLower);
     })
   }
+
 }
 

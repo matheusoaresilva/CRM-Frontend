@@ -16,7 +16,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="customer " *ngFor="let customer of filteredCustomers">
+            <tr class="customer " *ngFor="let customer of filteredCustomers | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
               <td style="width: 96px;"> <img src={{customer.imgUrl}}   alt="Customer 1" width="70" height="70"  class="rounded-circle"></td>
               <td> <p class="t-name"> {{ customer.name }}</p>
                 <p class="t-email">{{ customer.email }}</p>
@@ -26,6 +26,9 @@
             </tr>
           </tbody>
         </table>
+        <div class="pagination-container">
+          <pagination-controls (pageChange)="p = $event" class="custom-pagination"></pagination-controls>
+        </div>
         
       </div>
     </div>

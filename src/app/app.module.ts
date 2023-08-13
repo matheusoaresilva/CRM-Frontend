@@ -41,6 +41,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
+import { MatPaginatorModule} from '@angular/material/paginator';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,6 @@ import { FilterPipe } from './pipes/filter.pipe';
     NavbarComponent,
     CardInfoDashboardComponent,
     CustomersComponent,
-    TableCustomersComponent,
     FormsAddCustomerComponent,
     AddCustomersComponent,
     AddCustomersAddressComponent,
@@ -72,6 +73,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     ProfileDetailsComponent,
     ProfileComponent,
     FilterPipe,
+    TableCustomersComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,7 +89,9 @@ import { FilterPipe } from './pipes/filter.pipe';
     MatMenuModule,
     MatButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

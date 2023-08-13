@@ -1,44 +1,45 @@
-.container{
+.container {
   max-width: 85%;
 }
 
-h1{
+h1 {
   font-weight: 500;
 }
 
 
-.add-client-button{
+.add-client-button {
   background-color: #D6ACF2;
   border: none;
 }
 
-.t-table{
+.t-table {
   color: #999999;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-h4{
+h4 {
   font-weight: bold;
   margin-bottom: 0px;
 }
+
 .imgInfos {
   display: flex;
   align-items: center;
 }
 
 .t-name {
- font-size: 18px;
- font-weight: 500;
- margin-top: 10px;
- margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-.t-email{
+.t-email {
   color: #757575;
 }
 
-img{
+img {
   margin-bottom: 10px;
 }
 
@@ -53,7 +54,7 @@ img{
     font-size: 20px;
   }
 
-  
+
 
   /* Reduce the size of the images and font on smaller screens */
   img {
@@ -77,3 +78,4 @@ img{
     padding-right: 20px;
   }
 }
+
