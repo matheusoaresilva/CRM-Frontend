@@ -118,8 +118,6 @@
     cursor: pointer;
   }
 
- 
-
   .ng-touched.ng-invalid:not(form){
     border-color: #f75050;
     color: #f75050;

@@ -44,6 +44,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { MessageErrorComponent } from './components/message-error/message-error.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { MessageErrorComponent } from './components/message-error/message-error.
     FilterPipe,
     TableCustomersComponent,
     MessageErrorComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

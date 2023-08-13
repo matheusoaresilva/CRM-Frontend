@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-forms-add-customer',
@@ -7,9 +9,11 @@ import { Component } from '@angular/core';
 })
 export class FormsAddCustomerComponent {
 
-  show: boolean = false;
 
-  toggle (){
-    this.show = !this.show;
+  constructor(private router: Router){}
+
+  addCustomer(form : NgForm){
+    return form.valid? this.router.navigate(['customers/addcustomer-address'])
+    : alert('Invalid');
   }
 }
