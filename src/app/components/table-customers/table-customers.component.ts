@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Customers } from 'src/app/core/types/types';
 
-import { CustomersService } from 'src/app/core/services/customers.service';
+import { CustomersService } from 'src/app/services/customers.service';
 
 @Component({
   selector: 'app-table-customers',

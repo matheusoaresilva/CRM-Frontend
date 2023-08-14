@@ -13,12 +13,16 @@
             <label for="">Zip code</label>
             <input type="number" class="form-control" placeholder="Enter zip code" aria-label="Zip code" name="zip"
               ngModel required #zip="ngModel" pattern="^(\d{5})(-?\d{3})$" style="margin-bottom: 0px;"
-              (blur)="getCEP($event, f)">
+              (blur)="getCEP($event, f)" validCep >
             <div *ngIf="(zip?.invalid && zip?.touched) || zip?.dirty">
               <app-message-error *ngIf="zip?.errors?.['required']"
                 message="The field should be filled in"></app-message-error>
               <app-message-error *ngIf="zip?.errors?.['pattern']"
                 message="The zip code should be, for example: 00000-000">
+              </app-message-error>
+              <app-message-error 
+              *ngIf="zip?.errors?.['validCep']"
+                message="the informed zip code does not exist">
               </app-message-error>
             </div>
           </div>

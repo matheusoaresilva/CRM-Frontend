@@ -5,11 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiCepService {
-
   url_API = 'https://viacep.com.br/ws/'
   constructor(private http: HttpClient) { }
 
   getCep(cep: string){
-    return this.http.get(`${this.url_API}${cep}/json`)
+    return this.http.get(`${this.url_API}${cep}/json`);
   }
 }
