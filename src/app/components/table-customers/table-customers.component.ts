@@ -35,7 +35,7 @@ export class TableCustomersComponent implements OnInit {
   searchCustomers(): void{
     const searchTextLower = this.searchText.toLowerCase().trim();
     this.filteredCustomers = this.customers.filter(customer => {
-      return customer.name.toLowerCase().includes(searchTextLower);
+      return customer.firstName.toLowerCase().includes(searchTextLower) || customer.lastName.toLowerCase().includes(searchTextLower);
     })
   }
 

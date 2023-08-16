@@ -9,28 +9,28 @@
         <div class="row g-3">
           <div class="col">
             <label for="">First Name</label>
-            <input type="text" class="form-control" placeholder="Enter first name" aria-label="First name" required minlength="2" ngModel name="name" #name="ngModel" style="margin-bottom: 0px;">
-            <div *ngIf="(name?.invalid && name?.touched) || name?.dirty">
+            <input type="text" class="form-control" placeholder="Enter first name" aria-label="First name" required minlength="2" [(ngModel)]="firstName"  name="firstName" #fName="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(fName?.invalid && fName?.touched) || fName?.dirty">
               <app-message-error
-              *ngIf="name?.errors?.['required']"
+              *ngIf="fName?.errors?.['required']"
               message="The field should be filled in"
               ></app-message-error>
               <app-message-error
-              *ngIf="name?.errors?.['minlength']"
+              *ngIf="fName?.errors?.['minlength']"
               message="The first name must be at least 2 characters long"
               ></app-message-error>
             </div>
           </div>
           <div class="col">
             <label for="">Last Name</label>
-            <input type="text" class="form-control" placeholder="Enter last name" aria-label="Last name" required minlength="2" ngModel name="lastName" #lastName="ngModel" style="margin-bottom: 0px;">
-            <div *ngIf="(lastName?.invalid && lastName?.touched) || lastName?.dirty">
+            <input type="text" class="form-control" placeholder="Enter last name" aria-label="Last name" required minlength="2" [(ngModel)]="lastName" name="lastName" #lName="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(lName?.invalid && lName?.touched) || lName?.dirty">
               <app-message-error
-              *ngIf="lastName?.errors?.['required']"
+              *ngIf="lName?.errors?.['required']" 
               message="The field should be filled in"
               ></app-message-error>
               <app-message-error
-              *ngIf="lastName?.errors?.['minlength']"
+              *ngIf="lName?.errors?.['minlength']"
               message="The last name must be at least 2 characters long"
               ></app-message-error>
             </div>
@@ -39,40 +39,40 @@
         <div class="row g-3">
           <div class="col-sm-4">
             <label for="">Date of Birth</label>
-            <input type="date" class="form-control" placeholder="Enter birth date" aria-label="Birth" required ngModel name="birth" #birth="ngModel" style="margin-bottom: 0px;">
-            <div *ngIf="(birth?.invalid && birth?.touched) || birth?.dirty">
+            <input type="date" class="form-control"  placeholder="Enter birth date" aria-label="Birth" required ngModel name="birth" #b="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(b?.invalid && b?.touched) || b?.dirty">
               <app-message-error
-              *ngIf="birth?.errors?.['required']"
+              *ngIf="b?.errors?.['required']"
               message="The field should be filled in"
               ></app-message-error>
             </div>
           </div>
           <div class="col-sm">
             <label for="">Gender</label>
-            <select class="form-select" id="validationCustom04" required ngModel name="gender" #gender="ngModel" style="margin-bottom: 0px;">
+            <select class="form-select" id="validationCustom04" required [(ngModel)]="gender" name="gender" #g="ngModel" style="margin-bottom: 0px;">
               <option selected disabled value="">Enter gender...</option>
               <option>Male</option>
               <option>Female</option>
               <option>Prefer not to say</option>
             </select>
-            <div *ngIf="(gender?.invalid && gender?.touched) || gender?.dirty">
+            <div *ngIf="(g?.invalid && g?.touched) || g?.dirty">
               <app-message-error
-              *ngIf="gender?.errors?.['required']"
+              *ngIf="g?.errors?.['required']"
               message="The field should be filled in">
               </app-message-error>
             </div>
           </div>
           <div class="col-sm">
             <label for="">CPF</label>
-            <input type="number_format" class="form-control" pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" placeholder="Enter cpf" aria-label="CPF" required ngModel name="cpf" #cpf="ngModel" style="margin-bottom: 0px;">
+            <input type="number_format" class="form-control" pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" placeholder="Enter cpf" aria-label="CPF" required [(ngModel)]="cpf" name="cpf" #c="ngModel" style="margin-bottom: 0px;">
             <div
-            *ngIf="(cpf?.invalid && cpf?.touched) || cpf?.dirty">
+            *ngIf="(c?.invalid && c?.touched) || c?.dirty">
             <app-message-error
-            *ngIf="cpf?.errors?.['required']"
+            *ngIf="c?.errors?.['required']"
             message="The field should be filled in"
             ></app-message-error>
             <app-message-error
-            *ngIf="cpf?.errors?.['pattern']"
+            *ngIf="c?.errors?.['pattern']"
             message="The cpf should be for example '123.456.789-09'"
             ></app-message-error>
           </div>
@@ -81,27 +81,28 @@
         <div class="row g-3">
           <div class="col-9">
             <label for="">Email</label>
-            <input name="email" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter email" ngModel pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$" #email="ngModel"  required style="margin-bottom: 0px;">
+            <input name="email" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter email" [(ngModel)]="email" pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$" #e="ngModel"  required style="margin-bottom: 0px;">
 
-            <div *ngIf="(email?.invalid && email?.touched) || email?.dirty">
-              <app-message-error *ngIf="email?.errors?.['required']" message="The field should be filled in"></app-message-error>
+            <div *ngIf="(e?.invalid && e?.touched) || e?.dirty">
+              <app-message-error *ngIf="e?.errors?.['required']" message="The field should be filled in"></app-message-error>
               
-              <app-message-error *ngIf="email?.errors?.['pattern']" message="The email field should follow this pattern: 'exemple@exemple.com'"></app-message-error>
+              <app-message-error *ngIf="e?.errors?.['pattern']" message="The email field should follow this pattern: 'exemple@exemple.com'"></app-message-error>
             </div>
           </div>
           <div class="col">
             <label for="">Phone</label>
-            <input type="tel" class="form-control" placeholder="Enter phone" aria-label="Phone" required name="phone" ngModel #phone="ngModel" style="margin-bottom: 0px;" pattern="^(1[1-9]|[4689][0-9]|2[12478]|3([1-5]|[7-8])|5([13-5])|7[193-7])9[0-9]{8}$">
-            <div *ngIf="(phone?.invalid && phone?.touched) || phone?.dirty">
+            <input type="tel" class="form-control" placeholder="Enter phone" aria-label="Phone" required name="phone" [(ngModel)]="phone" #p="ngModel" style="margin-bottom: 0px;" pattern="^(1[1-9]|[4689][0-9]|2[12478]|3([1-5]|[7-8])|5([13-5])|7[193-7])9[0-9]{8}$">
+            <div *ngIf="(p?.invalid && p?.touched) || p?.dirty">
               <app-message-error
-              *ngIf="phone?.errors?.['required']"
+              *ngIf="p?.errors?.['required']"
               message="The field should be filled in"
               ></app-message-error>
               <app-message-error
-              *ngIf="phone?.errors?.['pattern']"
+              *ngIf="p?.errors?.['pattern']"
               message="The phone number should be for example '(12) 12345-6789 '."
               ></app-message-error>
             </div>
+           
           </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end btns">

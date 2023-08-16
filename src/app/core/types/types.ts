@@ -1,8 +1,8 @@
 export interface Customers{
     id: number,
-    name: string,
-    imgUrl: string,
-    dateBirth: string,
+    firstName: string,
+    lastName: string,
+    dateBirth: Date,
     cpf: string,
     gender: string,
     phone: string,

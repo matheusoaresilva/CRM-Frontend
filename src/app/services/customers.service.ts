@@ -18,4 +18,8 @@ export class CustomersService {
   list(): Observable<Customers[]>{
     return this.httpClient.get<Customers[]>(`${this.apiUrl}/customers`)
   }
+
+  saveDataNewCustomer(data: any){
+    return this.httpClient.post(`${this.apiUrl}/customers`, data);
+  }
 }

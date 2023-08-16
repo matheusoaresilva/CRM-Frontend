@@ -11,7 +11,6 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col" class=""> </th>
             <th scope="col" class="t-table">Client</th>
             <th scope="col" class="t-table">CPF</th>
             <th scope="col" class="t-table">Phone</th>
@@ -20,10 +19,10 @@
         <tbody>
           <tr class="customer "
             *ngFor="let customer of filteredCustomers | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
-            <td style="width: 96px;"> <img src={{customer.imgUrl}} alt="Customer 1" width="70" height="70"
-                class="rounded-circle"></td>
+            <!-- <td style="width: 96px;"> <img src={{customer.imgUr}} alt="Customer 1" width="70" height="70"
+                class="rounded-circle"></td> -->
             <td>
-              <p class="t-name"> {{ customer.name }}</p>
+              <p class="t-name"> {{ customer.firstName  +  " " + customer.lastName}}</p>
               <p class="t-email">{{ customer.email }}</p>
             </td>
             <td>{{ customer.cpf }}</td>
