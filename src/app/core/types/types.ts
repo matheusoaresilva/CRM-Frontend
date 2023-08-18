@@ -9,3 +9,22 @@ export interface Customers{
     email: string,
     addressId: number
 }
+
+export interface Address{
+    id: number,
+    street: string,
+    number: number,
+    neighborhood: string,
+    city: string,
+    state: string,
+    country: string,
+    zipcode: string
+}
+
+export interface Orders{
+    date: any
+    id: number,
+    requestedDate: string,
+    status: string,
+    items: string
+}

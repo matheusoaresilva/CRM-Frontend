@@ -3,33 +3,28 @@
       <div class="col-sm">
           <h1>Orders</h1>
       </div>
-      <div class="col-sm">
-        <div class="input-group">
-          <input type="text" class="form-control search-input" placeholder="Search Product..." aria-label="Search for orders">
-          <span class="input-group-text">
-            <mat-icon>search</mat-icon>
-          </span>
-        </div>
+      <div class="input-group mb-3 search-input">
+        <input type="text" class="form-control" placeholder="Search for customers" aria-label="Search for customers"
+          [(ngModel)]="searchText" (keyup)="searchOrders()">
       </div>
   </div>
   <table class="table table-hover">
       <thead class="table-light">
           <tr>
-              <th scope="col">Order</th>
-              <th scope="col">Name</th>
-              <th scope="col">Status</th>
-              <th scope="col">Total</th>
+              <th scope="col">Id</th>
               <th scope="col">Date</th>
+              <th scope="col">Status</th>
+              <!-- <th scope="col">Items</th> -->
               <th scope="col">View Details</th>
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let order of ordersContext">
+          <tr *ngFor="let order of filteredOrders | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
               <th scope="row">
                   <input class="form-check-input" type="checkbox" name="checkorders" id="flexCheckDefault">
                    {{order.id}}
               </th>
-              <td>{{order.clientName}}</td>
+              <td>{{order.requestedDate | date:'dd/MM/yyyy HH:mm'}}</td>
               <td [ngClass]="{
                 'container-realized': order.status === 'REALIZED',
                 'container-cancelled': order.status === 'CANCELLED',
@@ -40,28 +35,13 @@
                 'container-out-for-delivery': order.status === 'OUT_FOR_DELIVERY',
                 'container-delivered': order.status === 'DELIVERED'
               }">{{order.status}}</td>
-              <td>R$ {{order.total}}</td>
-              <td>{{order.date}}</td>
+              <!-- <td>{{order.items}}</td> -->
               <td><button type="button" class="btn">View Details</button></td>
           </tr>
       </tbody>
   </table>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-end custom-pagination">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="pagination-container">
+    <pagination-controls class="pagination-controls" (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+  </div>
   
 </div>

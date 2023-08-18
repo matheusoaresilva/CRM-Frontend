@@ -10,7 +10,7 @@ import { CustomersService } from 'src/app/services/customers.service';
 })
 export class FormsAddCustomerComponent {
 
-  firstName: string = '';
+    firstName: string = '';
     lastName: string = '';
     cpf: string= '';
     gender: string= '';
@@ -23,12 +23,15 @@ export class FormsAddCustomerComponent {
     ){}
 
   addCustomer(form : NgForm){
-
     if(form.valid ){
-
-    
-
-    const data = {firstName: this.firstName, lastName: this.lastName, cpf: this.cpf, gender: this.gender, phone: this.phone, email: this.email};
+    const data = {
+      firstName: this.firstName, 
+      lastName: this.lastName, 
+      cpf: this.cpf, 
+      gender: this.gender, 
+      phone: this.phone, 
+      email: this.email
+    };
     this.customersService.saveDataNewCustomer(data).subscribe(
       res => {
         console.log('New Customer save with sucess!', res);

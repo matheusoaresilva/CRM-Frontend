@@ -3,7 +3,7 @@
 <div class="container">
 
   <div class="mb-3">
-    <form #f="ngForm">
+    <form #f="ngForm" (ngSubmit)="addAddress(f)">
 
       <h1>Registration</h1>
       <h2>Address Details</h2>
@@ -11,73 +11,104 @@
         <div class="row g-3">
           <div class="col-3">
             <label for="">Zip code</label>
-            <input type="number" class="form-control" placeholder="Enter zip code" aria-label="Zip code" name="zip"
-              ngModel required #zip="ngModel" pattern="^(\d{5})(-?\d{3})$" style="margin-bottom: 0px;"
-              (blur)="getCEP($event, f)" validCep >
-            <div *ngIf="(zip?.invalid && zip?.touched) || zip?.dirty">
-              <app-message-error *ngIf="zip?.errors?.['required']"
+            <input type="number" class="form-control" placeholder="Enter zip code" aria-label="Zip code"  name="zip"
+            [(ngModel)]="zipcode" #z="ngModel" required   style="margin-bottom: 0px;"
+               validCep >
+            <div *ngIf="(z?.invalid && z?.touched) || z?.dirty">
+              <app-message-error *ngIf="z?.errors?.['required']"
                 message="The field should be filled in"></app-message-error>
-              <app-message-error *ngIf="zip?.errors?.['pattern']"
+              <app-message-error *ngIf="z?.errors?.['pattern']"
                 message="The zip code should be, for example: 00000-000">
               </app-message-error>
               <app-message-error 
-              *ngIf="zip?.errors?.['validCep']"
+              *ngIf="z?.errors?.['validCep']"
                 message="the informed zip code does not exist">
               </app-message-error>
             </div>
           </div>
           <div class="col-6">
             <label for="">Street</label>
-            <input type="text" class="form-control" placeholder="Enter street" aria-label="Street" ngModel required
-              name="street" #street="ngModel" minlength="5" style="margin-bottom: 0px;">
-            <div *ngIf="(street?.invalid && street?.touched) || street?.dirty">
-              <app-message-error *ngIf="street?.errors?.['required']"
+            <input type="text" class="form-control" placeholder="Enter street" aria-label="Street" [(ngModel)]="street"  required
+              name="street" #str="ngModel" minlength="5" style="margin-bottom: 0px;">
+            <div *ngIf="(str?.invalid && str?.touched) || str?.dirty">
+              <app-message-error *ngIf="str?.errors?.['required']"
                 message="The field should be filled in"></app-message-error>
-              <app-message-error *ngIf="street?.errors?.['minlength']"
+              <app-message-error *ngIf="str?.errors?.['minlength']"
                 message="The street must be at least 5 characters long"></app-message-error>
             </div>
           </div>
           <div class="col">
             <label for="">Number</label>
-            <input type="number" class="form-control" placeholder="Enter number" aria-label="Number" required ngModel
-              name="number" #number="ngModel" style="margin-bottom: 0px;">
-            <div *ngIf="(number?.invalid && number?.touched) || number?.dirty">
-              <app-message-error *ngIf="number?.errors?.['required']"
+            <input type="number" class="form-control" placeholder="Enter number" aria-label="Number" required [(ngModel)]="number"
+              name="number" #n="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(n?.invalid && n?.touched) || n?.dirty">
+              <app-message-error *ngIf="n?.errors?.['required']"
                 message="The field should be filled in"></app-message-error>
             </div>
           </div>
           <div class="col-6">
             <label for="">Neighborhood</label>
             <input type="text" class="form-control" placeholder="Enter neighborhood" aria-label="Neighborhood" required
-              ngModel name="neighborhood" #neighborhood="ngModel" minlength="3" style="margin-bottom: 0px;">
-            <div *ngIf="(neighborhood?.invalid && neighborhood?.touched) || neighborhood?.dirty">
-              <app-message-error *ngIf="neighborhood?.errors?.['required']"
+              [(ngModel)]="neighborhood" name="neighborhood" #neigh="ngModel" minlength="3" style="margin-bottom: 0px;">
+            <div *ngIf="(neigh?.invalid && neigh?.touched) || neigh?.dirty">
+              <app-message-error *ngIf="neigh?.errors?.['required']"
                 message="The field should be filled in"></app-message-error>
-              <app-message-error *ngIf="neighborhood?.errors?.['minlength']"
+              <app-message-error *ngIf="neigh?.errors?.['minlength']"
                 message="The neighborhood must be at least 3 characters long"></app-message-error>
             </div>
           </div>
           <div class="col-6">
             <label for="">City</label>
-            <input type="text" class="form-control" placeholder="Enter city" aria-label="City">
+            <input type="text" class="form-control" placeholder="Enter city" aria-label="City" [(ngModel)]="city" #ct="ngModel" required minlength="3" style="margin-bottom: 0px;">
+            <div *ngIf="(ct?.invalid && ct?.touched) || ct?.dirty">
+              <app-message-error
+              *ngIf="ct?.errors?.['required']"
+              message="The field should be filled in"
+              ></app-message-error>
+              <app-message-error
+              *ngIf="ct?.errors?.['minlength']"
+              message="The city must be at least 3 characters long"
+              ></app-message-error>
+            </div>
           </div>
         </div>
 
         <div class="col-sm">
           <label for="">State</label>
-          <input type="text" class="form-control" placeholder="Enter state" aria-label="State">
+          <input type="text" class="form-control" placeholder="Enter state" aria-label="State"
+          required [(ngModel)]="state" #stt="ngModel" minlength="3">
+          <div
+          *ngIf="(stt?.invalid && stt?.touched) || stt?.dirty">
+          <app-message-error
+          *ngIf="stt?.errors?.['required']"
+          message="The field should be filled in"
+          ></app-message-error>
+          <app-message-error
+          *ngIf="stt?.errors?.['minlength']"
+          message="The state must be at least 3 characters long"
+          ></app-message-error>
+          </div>
         </div>
         <div class="col-6">
           <label for="">Country</label>
-          <input type="text" class="form-control" placeholder="Enter country" aria-label="Country">
+          <input type="text" class="form-control" placeholder="Enter country" aria-label="Country" required [(ngModel)]="country" #contr="ngModel" minlength="3">
+          <div
+          *ngIf="(contr?.invalid && contr?.touched) || contr?.dirty">
+          <app-message-error
+          *ngIf="contr?.errors?.['required']"
+          message="The field should be filled in"
+          ></app-message-error>
+          <app-message-error
+          *ngIf="contr?.errors?.['minlength']"
+          message="The Country must be at least 3 characters long"
+          ></app-message-error>
+          </div>
         </div>
         <div class="row g-3">
-
-
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end btns">
           <button class="btn btn-cancel me-md-2" type="button" routerLink="/customers">Cancel</button>
-          <button class="btn btn-add" type="submit" routerLink="/customers">Add </button>
+          <button class="btn btn-add" type="submit" >Add </button>
         </div>
       </div>
 

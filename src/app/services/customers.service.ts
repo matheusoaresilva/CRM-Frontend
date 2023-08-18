@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Customers } from '../core/types/types';
+import { Customers, Orders } from '../core/types/types';
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +22,13 @@ export class CustomersService {
   saveDataNewCustomer(data: any){
     return this.httpClient.post(`${this.apiUrl}/customers`, data);
   }
+
+  saveDataNewAddress(data: any){
+    return this.httpClient.post(`${this.apiUrl}/addresses`, data);
+  }
+  
+  listOrders(): Observable<Orders[]>{
+    return this.httpClient.get<Orders[]>(`${this.apiUrl}/orders`)
+  }
+  
 }
