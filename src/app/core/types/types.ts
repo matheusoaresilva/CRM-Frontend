@@ -28,3 +28,14 @@ export interface Orders{
     status: string,
     items: string
 }
+
+export interface Products{
+    id: number,
+    name: string,
+    description: string,
+    price: number,
+    imgUrl: string,
+    category: string,
+    sku: number,
+    supplier: string
+}

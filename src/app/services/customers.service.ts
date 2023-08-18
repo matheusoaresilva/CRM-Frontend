@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Customers, Orders } from '../core/types/types';
+import { Customers, Orders, Products } from '../core/types/types';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,10 @@ export class CustomersService {
   
   listOrders(): Observable<Orders[]>{
     return this.httpClient.get<Orders[]>(`${this.apiUrl}/orders`)
+  }
+
+  listProducts(): Observable<Products[]>{
+    return this.httpClient.get<Products[]>(`${this.apiUrl}/products`)
   }
   
 }
