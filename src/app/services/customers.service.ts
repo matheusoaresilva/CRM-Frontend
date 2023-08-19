@@ -34,5 +34,9 @@ export class CustomersService {
   listProducts(): Observable<Products[]>{
     return this.httpClient.get<Products[]>(`${this.apiUrl}/products`)
   }
+
+  saveDataNewProduct(data: any){
+    return this.httpClient.post(`${this.apiUrl}/products`, data);
+  }
   
 }

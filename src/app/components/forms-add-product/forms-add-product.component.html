@@ -1,53 +1,114 @@
 <h1 class="title">Add New Product</h1>
 <div class="container">
 
-    <div class="mb-3">
+  <div class="mb-3">
+    <form #f="ngForm" (ngSubmit)="addProduct(f)">
       <div class="row g-3">
         <div class="row g-3">
           <div class="col-12">
             <label for="">Product title</label>
-            <input type="text" class="form-control" placeholder="" aria-label="First name">
+            <input type="text" class="form-control" placeholder="" aria-label="First name" required minlength="3"
+              name="title" [(ngModel)]="name" #title="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(title?.invalid && title?.touched) || title?.dirty">
+              <app-message-error *ngIf="title?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <app-message-error *ngIf="title?.errors?.['minlength']"
+                message="The name must be at least 3 characters long"></app-message-error>
+            </div>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required minlength="10"
+              [(ngModel)]="description" name="description" #desc="ngModel" style="margin-bottom: 0px;"></textarea>
+            <div *ngIf="(desc?.invalid && desc?.touched) || desc?.dirty">
+              <app-message-error *ngIf="desc?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <app-message-error *ngIf="desc?.errors?.['minlength']"
+                message="The description must be at least 10 characters long"></app-message-error>
+            </div>
           </div>
-         
         </div>
         <div class="row g-3">
           <div class="col-6">
             <label for="">Category</label>
-            <input type="text" class="form-control" placeholder="" aria-label="Email">
+            <input type="text" class="form-control" placeholder="" aria-label="Email" minlength="3" required
+              [(ngModel)]="category" name="category" #cate="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(cate?.invalid && cate?.touched) || cate?.dirty">
+              <app-message-error *ngIf="cate?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <app-message-error *ngIf="cate?.errors?.['minlength']"
+                message="The category must be at least 3 characters long"></app-message-error>
+            </div>
           </div>
           <div class="col-sm-6">
             <label for="">Price</label>
-            <input type="number" class="form-control" placeholder="" aria-label="Birth">
+            <input type="text" class="form-control" placeholder="" aria-label="Price" minlength="2" required
+              [(ngModel)]="price" name="price" #pric="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(pric?.invalid && pric?.touched) || pric?.dirty">
+              <app-message-error *ngIf="pric?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <app-message-error *ngIf="pric?.errors?.['minlength']"
+                message="The price must be at least 2 characters long"></app-message-error>
+            </div>
           </div>
         </div>
         <div class="row g-3">
           <div class="col-6">
-            <label for="">Category</label>
-            <input type="text" class="form-control" placeholder="" aria-label="Email">
+            <label for="">Img Url</label>
+            <input type="text" class="form-control" placeholder="" aria-label="Image" minlength="8" [(ngModel)]="imgUrl" required
+              name="Image" #img="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(img?.invalid && img?.touched) || img?.dirty">
+              <app-message-error *ngIf="img?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <app-message-error *ngIf="img?.errors?.['minlength']"
+                message="The Img url must be at least 8 characters long"></app-message-error>
+            </div>
           </div>
           <div class="col">
             <label for="">Supplier</label>
-            <input type="number" class="form-control" placeholder="" aria-label="Phone">
+            <input type="text" class="form-control" placeholder="" aria-label="Supplier" minlength="4" required
+              [(ngModel)]="supplier" name="supplier" #supp="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(supp?.invalid && supp?.touched) || supp?.dirty">
+              <app-message-error *ngIf="supp?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <app-message-error *ngIf="supp?.errors?.['minlength']"
+                message="The supplier must be at least 4 characters long"></app-message-error>
+            </div>
           </div>
         </div>
         <div class="row g-3">
           <div class="col">
             <label for="">Sku</label>
-            <input type="number" class="form-control" placeholder="" aria-label="Phone">
+            <input type="text" class="form-control" placeholder="" aria-label="sku" [(ngModel)]="sku" required
+              name="sku" #sk="ngModel" style="margin-bottom: 0px;">
+            <div *ngIf="(sk?.invalid && sk?.touched) || sk?.dirty">
+              <app-message-error *ngIf="sk?.errors?.['required']"
+                message="The field should be filled in"></app-message-error>
+              <!-- <app-message-error *ngIf="sk?.errors?.['minlength']"
+                message="The sku must be at least 6 characters long"></app-message-error> -->
+            </div>
           </div>
           <div class="col">
             <label for="">Stock Quantity</label>
-            <input type="number" class="form-control" placeholder="" aria-label="Phone">
+            <input type="text" class="form-control" placeholder="" aria-label="stock" [(ngModel)]="stock" name="stock" required
+              #Squantity="ngModel" style="margin-bottom: 0px;">
+          </div>
+          <div *ngIf="(Squantity?.invalid && Squantity?.touched) || Squantity?.dirty">
+            <app-message-error *ngIf="Squantity?.errors?.['required']"
+              message="The field should be filled in"></app-message-error>
+            <app-message-error *ngIf="Squantity?.errors?.['minlength']"
+              message="The first name must be at least 2 characters long"></app-message-error>
           </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end btns">
           <button class="btn btn-cancel me-md-2" type="button" routerLink="/products">Cancel</button>
-          <button class="btn btn-add" type="button" routerLink="/products">Add </button>
+          <button class="btn btn-add" type="submit  ">Add </button>
         </div>
+
+
+
       </div>
-    </div>
-  
+    </form>
+  </div>
+</div>
+  // TODO: fazer validação dos campos, depois fazer POST dos products
