@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Customers, Orders, Products } from '../core/types/types';
+import { Customers, Login, Orders, Products } from '../core/types/types';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +37,11 @@ export class CustomersService {
 
   saveDataNewProduct(data: any){
     return this.httpClient.post(`${this.apiUrl}/products`, data);
+  }
+
+  login(username: string, password: string): Observable<any> {
+    const user = { username, password };
+    return this.httpClient.post(`${this.apiUrl}/auth/login`, user, { responseType: 'text' });
   }
   
 }

@@ -39,3 +39,10 @@ export interface Products{
     sku: number,
     supplier: string
 }
+
+export interface Login{
+    id: number,
+    name: string,
+    username: string,
+    password: string
+}
