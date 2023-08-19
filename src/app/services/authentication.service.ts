@@ -18,4 +18,9 @@ export class AuthenticationService {
     const user = { username, password };
     return this.httpClient.post(`${this.apiUrl}/auth/login`, user, { responseType: 'text' });
   }
+
+  create(name: string, username: string, password: string, role: string[]): Observable<any> {
+    const user = { name, username, password, role };
+    return this.httpClient.post(`${this.apiUrl}/auth/create`, user, { responseType: 'text' });
+  }
 }
