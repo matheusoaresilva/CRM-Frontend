@@ -79,17 +79,21 @@
     box-shadow: none;
   }
 
-  .linkPassword {
-    text-align: right;
-    margin-bottom: 20px;
+  .links{
+    display: inline-flex;
+    justify-content: center;
   }
 
-  .linkPassword a {
+  .linkPassword {
+    margin: 0 10px;
+  }
+
+  .links a {
     color: #888;
     text-decoration: none;
   }
 
-  .linkPassword a:hover {
+  .links a:hover {
     text-decoration: underline;
   }
 

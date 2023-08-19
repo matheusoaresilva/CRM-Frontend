@@ -71,7 +71,11 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileDetailsComponent
-  }
+  },
+  // {
+  //   path:'signup',
+  //   component: SignupComponent
+  // }
 
 ];
 

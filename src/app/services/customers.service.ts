@@ -39,9 +39,6 @@ export class CustomersService {
     return this.httpClient.post(`${this.apiUrl}/products`, data);
   }
 
-  login(username: string, password: string): Observable<any> {
-    const user = { username, password };
-    return this.httpClient.post(`${this.apiUrl}/auth/login`, user, { responseType: 'text' });
-  }
+  
   
 }

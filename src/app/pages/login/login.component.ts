@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CustomersService } from 'src/app/services/customers.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -13,21 +13,21 @@ export class LoginComponent {
 
     username: string = '';
     password: string = '';
+  
+    loginForm!: FormGroup;
 
-  constructor(private router: Router, private loginService: CustomersService, private http: HttpClient){}
+  constructor(
+    private router: Router, 
+    private authService: AuthenticationService, 
+    ){}
+  
 
-  // #f="ngForm" (ngSubmit)="login(f)"
 
-  signup(){
+  login(){
     console.log(this.username);
     console.log(this.password);
-    
-    let bodyData = {
-      username: this.username,
-      password: this.password
-    };
 
-    this.http.post("http://localhost:8080/auth/login", bodyData, { responseType: 'text'})
+    this.authService.login(this.username, this.password)
     .subscribe((resultData: string) =>
     {
       console.log(resultData);
