@@ -22,7 +22,7 @@ export class AuthenticationService {
 
   login(username: string, password: string): Observable<any> {
     const user = { username, password };
-    return this.httpClient.post(`${this.apiUrl}/auth/login`, user, { responseType: 'text' });
+    return this.httpClient.post(`${this.apiUrl}/auth/login`, user);
   }
 
   create(name: string, username: string, password: string, role: string[]): Observable<HttpResponse<AuthResponse>> {

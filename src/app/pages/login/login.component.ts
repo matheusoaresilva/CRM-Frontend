@@ -28,14 +28,13 @@ export class LoginComponent {
     console.log(this.password);
 
     this.authService.login(this.username, this.password)
-    .subscribe((resultData: string) =>
-    {
-      console.log(resultData);
-      if(resultData === "Acesso liberado:"){
-        this.router.navigate(['/dashboard'])
-      }else if(resultData === "Nome de usuário ou senha inválidos"){
-        alert("Nome de usuário ou senha inválidos")
-        
+    .subscribe({
+      next: (value) => {
+        console.log('Login realizado com sucesso', value);
+        this.router.navigate(['/dashboard']);
+      },
+      error: (err) => {
+        console.log('Erro ao realizar login', err);
       }
     })
   }
