@@ -36,17 +36,28 @@ export class SignupComponent {
     
     const rolesList = [this.role];
 
+
+
     this.authService.create(this.name, this.username, this.password, rolesList)
-    .subscribe((resultData: string) =>
-    {
-      console.log(resultData);
-      if(resultData === "Usuário criado com sucesso"){
-        alert("Usuário criado com sucesso")
-        this.router.navigate(['/login'])
-      }else if(resultData === "Nome de usuário ou senha inválidos"){
-        alert("Nome de usuário ou senha inválidos")
-        
-      }
-    })
+    .subscribe({
+        next: (value) => {
+          console.log('cadastro com sucesso', value);
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.log('Erro ao realizar cadastro', err);
+        }
+      });
+
   }
 }
+// {
+//   console.log(resultData);
+//   if(resultData === "Usuário criado com sucesso"){
+//     alert("Usuário criado com sucesso")
+//     this.router.navigate(['/login'])
+//   }else if(resultData === "Nome de usuário ou senha inválidos"){
+//     alert("Nome de usuário ou senha inválidos")
+    
+//   }
+// })
