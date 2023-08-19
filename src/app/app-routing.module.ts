@@ -13,6 +13,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { ProfileDetailsComponent } from './pages/profile-details/profile-details.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -72,10 +73,10 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileDetailsComponent
   },
-  // {
-  //   path:'signup',
-  //   component: SignupComponent
-  // }
+  {
+    path:'signup',
+    component: SignupComponent
+  }
 
 ];
 
