@@ -43,7 +43,12 @@
   margin-bottom: 20px;
 }
 
-
+.container-profile{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .card-text {
   font-size: 0.9rem;
@@ -68,23 +73,23 @@ ul.list-unstyled li {
   padding-left: 20px;
 }
 
-.edit{
+.edit {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.btn-edit{
+.btn-edit {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.btn-edit:hover{
+.btn-edit:hover {
   color: #c482f0;
 }
 
-.btn-edit:active{
+.btn-edit:active {
   color: #D6ACF2;
 }

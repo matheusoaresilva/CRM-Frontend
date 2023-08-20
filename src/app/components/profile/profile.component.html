@@ -7,8 +7,6 @@
             <h5 class="card-title mt-3">John Doe</h5>
             <p class="card-text">Role: Administrator</p>
             <p class="card-text">Email: john.doe@example.com</p>
-            <p class="card-text">Phone: +1 123-456-7890</p>
-            <p class="card-text">Date of Birth: January 15, 1981</p>
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal" (click)="toggleEditProfile()">Edit Profile</button>
             
           </div>
@@ -31,14 +29,8 @@
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder=" ">
               </div>
-              <div class="form-group">
-                <label for="role">Phone</label>
-                <input type="text" class="form-control" id="role" placeholder="" >
-              </div>
-              <div class="form-group">
-                <label for="role">Birthday</label>
-                <input type="text" class="form-control" id="role" placeholder="" >
-              </div>
+              
+              
               <br>
               <button type="submit" class="btn btn-primary">Save Changes</button>
               <button type="button" class="btn btn-secondary ml-2" (click)="cancelEditProfile()">Cancel</button>
@@ -46,34 +38,6 @@
           </div>
         </div>
         
-        <div class="card">
-          <div class="card-body">
-            <div class="edit">
-              <h5 class="card-title">About me</h5>
-              <button class="btn btn-edit" (click)="toggleEditProfile()">Edit</button>
-            </div>
-            <div *ngIf="!showProfileSettings" id="textContent">
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores! Minima, reiciendis repellendus. Delectus minus quis ipsa maiores culpa quos!</p>
-            </div>
-            <div *ngIf="showProfileSettings" id="textareaContent">
-              <textarea class="form-control" rows="4" id="editedText" [(ngModel)]="editedTextValue"></textarea>
-              <button class="btn btn-primary" (click)="saveProfile()">Save</button>
-              <button class="btn btn-secondary" (click)="cancelEditProfile()">Cancel</button>
-            </div>
-          </div>
-          
-        </div>
-        <div class="card mt-4">
-          <div class="card-body">
-            <h5 class="card-title">Interest</h5>
-            <ul class="list-unstyled">
-              <li>Photography</li>
-              <li>Hiking</li>
-              <li>Reading</li>
-              <li>Drawing</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
     </div>
